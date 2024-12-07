@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="WelcomPage" prefHeight="760.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomePageController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1050.0" style="-fx-background-color: #f4f8fb; -fx-font-family: 'Arial';" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      
+          <!-- Header with Logo and Navigation -->
+          <top>
+              <HBox alignment="CENTER" prefHeight="94.0" prefWidth="850.0" spacing="15" style="-fx-background-color: black; -fx-padding: 15px;">
+               <HBox prefHeight="64.0" prefWidth="817.0">
+                  <children>
+                     <ImageView fitHeight="67.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../util/logo.jpg" />
+                        </image>
+                     </ImageView>
+                     <Label prefHeight="43.0" prefWidth="139.0" text="SKIN CARE" textFill="WHITE">
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font name="Marlett" size="22.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="370.0" spacing="20" style="-fx-padding: 0 0 0 20;">
+                      <Button fx:id="NavShopLogin" onAction="#handleLoginShopButton" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold;" text="Shop" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                      <Button fx:id="NavLoginButton" onAction="#handleLoginShopButton" style="-fx-background-color: black; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 8px 15px; -fx-font-weight: bold;" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="NavRegisterButton" onAction="#handleNavRegisterButton" style="-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 15; -fx-padding: 8px 15px;" text="Register">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  </HBox>
+              </HBox>
+          </top>
+      
+          <!-- Main Content -->
+          <center>
+              <VBox alignment="TOP_RIGHT" spacing="20" style="-fx-padding: 30px; -fx-background-color: white;" />
+          </center>
+      
+          <!-- Footer Section -->
+          <bottom>
+              <HBox alignment="CENTER" prefHeight="36.0" prefWidth="830.0" spacing="20" style="-fx-background-color: black; -fx-padding: 10px;">
+                  <Label fx:id="footerContactLabel" style="-fx-text-fill: white;" text="Contact Us: info@skincareshop.com" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Label>
+              </HBox>
+          </bottom>
+         <left>
+            <Pane prefHeight="540.0" prefWidth="352.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="354.0" layoutY="69.0" prefHeight="426.0" prefWidth="103.0" style="-fx-background-color: #E1E4DB;">
+                     <children>
+                        <Text layoutX="206.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the shop">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="213.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discover the best products to care for your skin.">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="168.0" layoutY="371.0" prefHeight="147.0" prefWidth="491.0" style="-fx-background-color: #E1E4DB;">
+                           <children>
+                              <Label layoutX="195.0" layoutY="22.0" prefHeight="20.0" prefWidth="171.0" style="-fx-text-fill: black; -fx-font-weight: bold;" text="THE BEST PRODUCT">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Text layoutX="197.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nourish and glow with our skincare collection, hydrating creams, and rejuvenating masks crafted for radiant, healthy skin. Gentle, effective, and perfect for all skin types." wrappingWidth="257.34906005859375" />
+                              <ImageView fitHeight="121.0" fitWidth="170.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../util/bestProduct.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="LoginShopButton" layoutX="216.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleLoginShopButton" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="SHOP NOW">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="426.0" fitWidth="286.0" layoutX="141.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../util/welcome.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

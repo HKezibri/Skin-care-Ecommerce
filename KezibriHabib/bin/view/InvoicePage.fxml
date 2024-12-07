@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="743.0" prefWidth="600" spacing="20" style="-fx-padding: 20;">
+      
+          <!-- Header Section -->
+          <HBox spacing="20">
+              <VBox spacing="10">
+                  <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="144.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="INVOICE">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <padding>
+                     <Insets left="10.0" top="10.0" />
+                  </padding>
+                  <font>
+                     <Font size="30.0" />
+                  </font></Label>
+                  <GridPane hgap="10" vgap="5">
+                      <Label text="Invoice number:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                      <Label fx:id="invoiceNumber" text="00001" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></Label>
+                      <Label text="Date of issue:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                      <Label fx:id="dateOfIssue" text="mm/dd/yyyy" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                  <VBox.margin>
+                     <Insets top="50.0" />
+                  </VBox.margin>
+                  </GridPane>
+              </VBox>
+              <Label style="-fx-font-size: 36px;" text="🛒">
+               <HBox.margin>
+                  <Insets left="290.0" top="10.0" />
+               </HBox.margin></Label>
+          </HBox>
+      
+          <!-- Billing Information Section -->
+          <HBox spacing="20">
+              <VBox spacing="10">
+                  <Label style="-fx-font-weight: bold;" text="Billed to">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                  <Label fx:id="clientName" prefHeight="18.0" prefWidth="92.0" text="Client Name" />
+				    <Label fx:id="clientPhone" text="Phone" />
+				    <Label fx:id="clientEmail" text="Email" />
+				    <Label fx:id="clientAddress" prefHeight="18.0" prefWidth="388.0" text="Address" />
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+              </VBox>
+              <VBox spacing="10">
+                  <Label style="-fx-font-weight: bold;" text="SKNN Shop">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                  <Label text="123 Street, Paris, France">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin></Label>
+                  <Label text="564-555-1234" />
+                  <Label text="info@skincareshop.com" />
+                  <Label text="SKNN.com" />
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+              </VBox>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+          </HBox>
+         <TableView fx:id="itemsTable" prefHeight="189.0" prefWidth="402.0">
+           <columns>
+             <TableColumn fx:id="productNameColumn" prefWidth="317.5999755859375" text="Product" />
+             <TableColumn fx:id="unitCostColumn" prefWidth="84.800048828125" text="Unit Cost" />
+               <TableColumn fx:id="quantityColumn" prefWidth="73.60003662109375" text="Quantity" />
+               <TableColumn fx:id="amountColumn" prefWidth="83.99993896484375" text="Amount" />
+           </columns>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </TableView>
+         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="331.0">
+            <children>
+               <Label prefHeight="22.0" prefWidth="95.0" text="Invoice Total">
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
+               </Label>
+               <Label fx:id="invoiceTotal" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="122.0" style="-fx-text-fill: black;">
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Label>
+
+            </children>
+         </HBox>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for trusting SKNN with your skincare needs. We’re honored to be a part of your self-care journey and look forward to serving you again!" wrappingWidth="479.73675537109375">
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font>
+         </Text>
+         
+		<!-- Total Section -->
+		
+      
+      
+      </VBox>
+   </children>
+</AnchorPane>
